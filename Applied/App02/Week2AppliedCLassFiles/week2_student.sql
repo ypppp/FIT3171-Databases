@@ -2,9 +2,9 @@
 Databases Week 2 Applied
 week2_student.sql
 
-student id:
-student name:
-last modified date:
+student id: 32205481
+student name: Yee Perng Yew
+last modified date: 8/2/2023
 
 */
 
