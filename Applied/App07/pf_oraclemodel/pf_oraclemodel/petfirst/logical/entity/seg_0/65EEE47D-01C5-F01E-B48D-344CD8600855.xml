@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65EEE47D-01C5-F01E-B48D-344CD8600855" name="CLINIC">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:18:55 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="clinic_id" id="60998DF8-288B-69B4-0F1B-DE87E2BFDCAB">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:19:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique idenitifier for clinic]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_name" id="285B6FB6-1484-5724-6655-8BF4ECC18D9C">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:19:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of clinic]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_address" id="6B58154E-60F6-5AFF-E26B-9843379B6D21">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:19:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Full street address of clinic]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_phoneno" id="43F4D3B2-71C1-A29B-9FEE-3A1DE463C5F0">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:20:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of clinic]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vet_id" id="6CFDF9FC-AD9E-96CA-B586-B636447B2DCB">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:36:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for vet]]></commentInRDBMS>
+<generatorID>8FB442B5-285F-D9E4-A010-06283FCCF7B2</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>56869176-5A34-F0EE-1FAD-ADD13F93ADE4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FDF1E314-897B-2231-9E0D-0D833FBFD0D7" name="CLINIC PK">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:19:10 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>60998DF8-288B-69B4-0F1B-DE87E2BFDCAB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

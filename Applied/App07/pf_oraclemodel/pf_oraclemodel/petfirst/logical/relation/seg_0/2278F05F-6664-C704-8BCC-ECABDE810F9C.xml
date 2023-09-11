@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="clinic_vet_home" directorySegmentName="seg_0" id="2278F05F-6664-C704-8BCC-ECABDE810F9C">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:35:20 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<sourcePk>FDF1E314-897B-2231-9E0D-0D833FBFD0D7</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>homes</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>65EEE47D-01C5-F01E-B48D-344CD8600855</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>37F7A391-D5C8-0920-46FE-B725A1A363CB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

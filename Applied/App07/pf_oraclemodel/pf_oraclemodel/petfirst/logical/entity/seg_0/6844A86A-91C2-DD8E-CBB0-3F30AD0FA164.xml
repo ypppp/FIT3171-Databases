@@ -1,0 +1,216 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6844A86A-91C2-DD8E-CBB0-3F30AD0FA164" name="VISIT">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:38:23 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="visit_id" id="A1960BCD-B73E-53F8-8271-0B51B5851ABE">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:38:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for a visit]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_datetime" id="B32355B7-973B-4D2C-D83E-DCAC7B8F1333">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:38:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time of visit]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_animalweight" id="F3085D10-574E-0024-8AF6-948FFB569C87">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:39:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Weight of animal at visit]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_length" id="1FA4992D-0B26-5B3F-E441-59B440429BCA">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:39:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Length of visit in minutes]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_notes" id="67F3389F-E8C5-5BD9-D2CB-BED0D9B071B8">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:40:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Notes from vet about condition of the pet]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_amount" id="0FBDEC3E-166A-23F4-8474-4BB91C209131">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:41:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total dollar amount for services and drugs provided at visit]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="visit_paytype" id="2E82A565-80DB-A9A9-5540-66D4298BD127">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:41:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Visit payment type]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<constraintName>chk_visit_paytype</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="C" description="Cash"/>
+<valueDef value="E" description="EFT"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="animal_id" id="3420B560-799C-DF2A-CB69-C3C38350EC0C">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:51:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for animal]]></commentInRDBMS>
+<generatorID>1673E9EA-7D21-45D6-94BB-B44206225531</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>E916C941-C8FB-C6DB-5FBE-EDC2B33F98C1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_id" id="87C33A75-7728-E1B2-F942-323EF666414C">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:54:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique idenitifier for clinic]]></commentInRDBMS>
+<generatorID>73D075AC-432E-5D50-DF32-02C1C260A9DD</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>60998DF8-288B-69B4-0F1B-DE87E2BFDCAB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vet_id" id="EB543714-5CD8-8BD0-E6EF-D7ED056267FC">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:54:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for vet]]></commentInRDBMS>
+<generatorID>AF3BD86B-69B9-7594-54A4-8EC98D613DA6</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>56869176-5A34-F0EE-1FAD-ADD13F93ADE4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="initial_visit_id" id="C65D0BD9-D7E2-3B76-3F3B-7524FB6799C0">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-07 08:45:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for a visit]]></commentInRDBMS>
+<generatorID>2638BAC3-FA24-DEAE-5F52-96A4C2333A73</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>A1960BCD-B73E-53F8-8271-0B51B5851ABE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="11150431-7A91-9EB7-3AFB-3FB3C11EE920" name="VISIT PK">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:38:44 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A1960BCD-B73E-53F8-8271-0B51B5851ABE</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="D9FB59EA-BFBF-8E82-CA12-F14C2E4E8E3B" name="VISIT UKs">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:51:43 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<newElementsIDs>B32355B7-973B-4D2C-D83E-DCAC7B8F1333,3420B560-799C-DF2A-CB69-C3C38350EC0C</newElementsIDs>
+<usedAttributes>
+<attributeRef>B32355B7-973B-4D2C-D83E-DCAC7B8F1333</attributeRef>
+<attributeRef>3420B560-799C-DF2A-CB69-C3C38350EC0C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D187986B-1BA4-642A-F812-E47F8D7861C4" name="TRAINING">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:21:18 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="training_id" id="C5D8A4EF-79A9-B706-6C11-246BBCB7A77F">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:21:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for a training]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="training_datetime" id="3C9E1DB7-7A49-69F6-5382-74789B6993E0">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:21:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date and time that the training took place]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="training_title" id="B5ED1468-2D3E-91A3-9217-C2C9F236C89D">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:21:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Title of the training]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="training_duration" id="5F3767B1-1C29-657C-1329-68A8F9F31063">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:22:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Duration of the training (in hours)]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_id" id="9B576786-06C1-3E78-D182-CCE2B504B920">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:28:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique idenitifier for clinic]]></commentInRDBMS>
+<generatorID>2EF1273D-039C-994B-6D51-7D1C564389DD</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>60998DF8-288B-69B4-0F1B-DE87E2BFDCAB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vet_id" id="539CAE73-9943-1F98-5743-1B1ACCA06AEB">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:29:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for vet]]></commentInRDBMS>
+<generatorID>38D9422F-68F9-43E3-65F9-2DA8B6CC924E</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>56869176-5A34-F0EE-1FAD-ADD13F93ADE4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="86C20FB9-39B7-6BF5-380F-8AD03D0E7634" name="TRAINING PK">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:21:38 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C5D8A4EF-79A9-B706-6C11-246BBCB7A77F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="owner_animal" directorySegmentName="seg_0" id="AD49D0B4-9867-96BA-9E8B-73C68021F0BB">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:53:23 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<sourcePk>506D7017-CC53-F920-217E-7A9F69DB6060</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>owns</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8AE258BD-4730-22F3-C5CE-12F0D127CD53</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>773A6EE5-BD0F-B108-B172-9725215C45A5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D1B52411-5936-7E2E-7ED7-3FA472C09A1E" name="CERTIFICATE">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:23:34 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cert_id" id="0FEAA952-BE59-CCDB-64C8-9DEEAE0670C6">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:23:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for certificate]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cert_completed" id="28D9EC45-70F9-A80B-C7EE-9F005FBC6DE8">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:27:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Whether certificate was given or not (training completed or not)]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<constraintName>chk_cert_completed</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="No"/>
+<valueDef value="Y" description="Yes"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cert_expiry" id="31B226F4-9625-19B0-2F81-57BB0EE1E97E">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:27:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of expiry for the certificate (if expires)]]></commentInRDBMS>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="training_id" id="77ABFEE5-7FF5-6040-AB0D-D2E85FEEFD07">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:30:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for a training]]></commentInRDBMS>
+<generatorID>322229A9-C0B4-4BFA-6E2C-326F7688AC96</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>C5D8A4EF-79A9-B706-6C11-246BBCB7A77F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vet_id" id="CA20AB88-B5C7-9E86-658B-72A571655A5E">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:31:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for vet]]></commentInRDBMS>
+<generatorID>17546167-74A4-99DA-AAAE-BB93E54840A2</generatorID>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<referedAttribute>56869176-5A34-F0EE-1FAD-ADD13F93ADE4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CBFE169C-2AB9-7468-A0D4-C95B375DA4CD" name="CERTIFICATE PK">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:23:51 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0FEAA952-BE59-CCDB-64C8-9DEEAE0670C6</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="4766EA61-5E2E-E0BD-A558-1B1D90424BB8" name="CERTIFICATE UKs">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 00:32:05 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<newElementsIDs>77ABFEE5-7FF5-6040-AB0D-D2E85FEEFD07,CA20AB88-B5C7-9E86-658B-72A571655A5E</newElementsIDs>
+<usedAttributes>
+<attributeRef>77ABFEE5-7FF5-6040-AB0D-D2E85FEEFD07</attributeRef>
+<attributeRef>CA20AB88-B5C7-9E86-658B-72A571655A5E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

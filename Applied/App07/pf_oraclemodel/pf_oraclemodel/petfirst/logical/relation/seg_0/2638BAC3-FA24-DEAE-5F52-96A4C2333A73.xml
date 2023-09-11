@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="visit_subsequent_visit" directorySegmentName="seg_0" id="2638BAC3-FA24-DEAE-5F52-96A4C2333A73">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-07 08:45:56 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<targetPk>11150431-7A91-9EB7-3AFB-3FB3C11EE920</targetPk>
+<identifying>false</identifying>
+<nameOnSource>creates_subsequent</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6844A86A-91C2-DD8E-CBB0-3F30AD0FA164</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6844A86A-91C2-DD8E-CBB0-3F30AD0FA164</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

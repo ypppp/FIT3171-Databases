@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="visit_serviceline" directorySegmentName="seg_0" id="85D11436-BC24-2F64-D6BF-22B161AA1393">
+<createdBy>benca</createdBy>
+<createdTime>2023-09-04 01:06:35 UTC</createdTime>
+<ownerDesignName>petfirst</ownerDesignName>
+<engineerTo>
+<item key="9DD459DB-F846-0660-2033-8F4E63135431" value="true"/>
+</engineerTo>
+<sourcePk>11150431-7A91-9EB7-3AFB-3FB3C11EE920</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>contains</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6844A86A-91C2-DD8E-CBB0-3F30AD0FA164</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CEC2B576-EE58-9982-B3E6-D56BA7CFFEED</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
