@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ECAC6983-17F8-6347-9424-B62BF6F0ADA1" name="ORDERS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0AF8300F-0246-A786-AFC1-CD49CB9EBC8D" name="PRODUCT">
 <createdBy>User</createdBy>
-<createdTime>2023-09-10 23:12:20 UTC</createdTime>
+<createdTime>2023-09-11 00:16:00 UTC</createdTime>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="order_no" id="F381BFC0-22E1-494C-CB41-8164167FE5D7">
+<Attribute name="prod_no" id="63719398-00AA-1B94-559A-16261251B5E1">
 <createdBy>User</createdBy>
-<createdTime>2023-09-10 23:12:33 UTC</createdTime>
-<commentInRDBMS><![CDATA[Order number]]></commentInRDBMS>
+<createdTime>2023-09-11 00:16:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product number]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
@@ -26,43 +26,56 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="order_date" id="DB20A281-92B4-003C-CFB3-4E5ED5C40069">
+<Attribute name="prod_desc" id="2AFFABB1-3C4B-EBE0-49A4-C8055573FB4C">
 <createdBy>User</createdBy>
-<createdTime>2023-09-10 23:13:43 UTC</createdTime>
-<commentInRDBMS><![CDATA[Order Date]]></commentInRDBMS>
+<createdTime>2023-09-11 00:16:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product description]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cust_no" id="D541BD92-B059-4A11-48BC-CD6EF52317A0">
+<Attribute name="prod_unitprice" id="8FB73DAB-51B7-9B42-026A-46E698F48D88">
 <createdBy>User</createdBy>
-<createdTime>2023-09-10 23:21:00 UTC</createdTime>
-<commentInRDBMS><![CDATA[customer number]]></commentInRDBMS>
-<generatorID>1A7C73BF-186F-083E-00C0-75FCEA02F182</generatorID>
+<createdTime>2023-09-11 00:16:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product unit price]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
 </engineerTo>
-<referedAttribute>FC6B5CD2-1BB0-FB71-15FD-5F90A3B89D81</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="order_no1" id="E9AAEFF3-07FE-EDFF-AB10-FF272CCC3148">
+<Attribute name="prod_category" id="3C05B9BF-185F-267F-B4F9-AC99EA7FF62B">
 <createdBy>User</createdBy>
-<createdTime>2023-09-11 00:15:43 UTC</createdTime>
+<createdTime>2023-09-11 00:16:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product category]]></commentInRDBMS>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_no" id="BFC4A684-B6B2-46AF-E5D0-AC2DB864A666">
+<createdBy>User</createdBy>
+<createdTime>2023-09-11 00:19:36 UTC</createdTime>
 <commentInRDBMS><![CDATA[Order Number]]></commentInRDBMS>
-<generatorID>51D54A4A-7687-F6B2-31AD-66F31BD82780</generatorID>
+<generatorID>41E3391A-D54E-DC38-1304-554FFA64E75D</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
@@ -75,11 +88,11 @@
 <dataTypePrecision>8</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="prod_no" id="69050A0C-9CBD-EFC8-5C0C-0EC4AFDEE1D3">
+<Attribute name="prod_no1" id="E343AD9C-E7ED-52DF-873B-EBEBB9B0F742">
 <createdBy>User</createdBy>
-<createdTime>2023-09-11 00:15:43 UTC</createdTime>
+<createdTime>2023-09-11 00:19:36 UTC</createdTime>
 <commentInRDBMS><![CDATA[Product number]]></commentInRDBMS>
-<generatorID>51D54A4A-7687-F6B2-31AD-66F31BD82780</generatorID>
+<generatorID>41E3391A-D54E-DC38-1304-554FFA64E75D</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
@@ -94,16 +107,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="BC4A73DC-A4FA-C00C-C7F5-5896E50D1E1A" name="ORDERS PK">
+<identifier id="BE204D7E-46DC-FB04-2D10-6887BC5CFFAC" name="PRODUCT PK">
 <createdBy>User</createdBy>
-<createdTime>2023-09-10 23:13:07 UTC</createdTime>
+<createdTime>2023-09-11 00:18:02 UTC</createdTime>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1B9D1AE3-92CD-5F26-EBD2-265728D689C5" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>F381BFC0-22E1-494C-CB41-8164167FE5D7</attributeRef>
+<attributeRef>63719398-00AA-1B94-559A-16261251B5E1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
