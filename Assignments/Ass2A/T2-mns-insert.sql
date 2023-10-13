@@ -114,7 +114,7 @@ INSERT INTO patient VALUES (
     'NSW',
     '2233',
     TO_DATE('30-Dec-2004', 'dd-Mon-yyyy'),
-    '0491570165',
+    '0491570166',
     'Joytee@gmail.com',
     0003
 );
@@ -128,7 +128,7 @@ INSERT INTO patient VALUES (
     'QLD',
     '4305',
     TO_DATE('21-Dec-2009', 'dd-Mon-yyyy'),
-    '0491570166',
+    '0491570167',
     'Joshualim@gmail.com',
     0002
 );
@@ -142,7 +142,7 @@ INSERT INTO patient VALUES (
     'QLD',
     '4305',
     TO_DATE('21-Dec-2009', 'dd-Mon-yyyy'),
-    '0491570167',
+    '0491570168',
     'Jeanettelim@gmail.com',
     0002
 );
@@ -156,7 +156,7 @@ INSERT INTO patient VALUES (
     'SA',
     '5006',
     TO_DATE('10-Apr-2020', 'dd-Mon-yyyy'),
-    '0882675066',
+    '0882675069',
     'Vicumang@gmail.com',
     0004
 );
@@ -227,5 +227,185 @@ INSERT INTO patient VALUES (
 --------------------------------------
 --INSERT INTO appointment
 --------------------------------------
+
+Insert into appointment values (
+    1000001,
+    TO_DATE('01-May-2023 08:30', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'S',
+    0001,
+    'END001',
+    001,
+    NULL  
+);
+
+Insert into appointment values (
+    1000002,
+    TO_DATE('01-MAY-2023 08:30', 'dd-Mon-yyyy hh24:mi'),
+    02,
+    'L',
+    0002,
+    'GEN002',
+    002,
+    NULL  
+);
+
+Insert into appointment values (
+    1000003,
+    TO_DATE('01-MAY-2023 09:00', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'T',
+    0003,
+    'GEN003',
+    001,
+    NULL  
+);
+
+Insert into appointment values (
+    1000004,
+    TO_DATE('01-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'S',
+    0004,
+    'GEN001',
+    001,
+    NULL  
+);
+
+Insert into appointment values (
+    1000005,
+    TO_DATE('01-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
+    02,
+    'T',
+    0005,
+    'ORS001',
+    002,
+    NULL  
+);
+
+Insert into appointment values (
+    1000006,
+    TO_DATE('08-MAY-2023 08:45', 'dd-Mon-yyyy hh24:mi'),
+    03,
+    'T',
+    0006,
+    'END001',
+    003,
+    NULL  
+);
+
+Insert into appointment values (
+    1000007,
+    TO_DATE('08-MAY-2023 09:45', 'dd-Mon-yyyy hh24:mi'),
+    03,
+    'T',
+    0007,
+    'GEN002',
+    003,
+    NULL  
+);
+
+Insert into appointment values (
+    1000008,
+    TO_DATE('08-MAY-2023 09:45', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'S',
+    0001,
+    'END001',
+    001,
+    1000001  
+);
+
+Insert into appointment values (
+    1000009,
+    TO_DATE('08-MAY-2023 11:45', 'dd-Mon-yyyy hh24:mi'),
+    04,
+    'L',
+    0008,
+    'GEN002',
+    004,
+    NULL  
+);
+
+Insert into appointment values (
+    1000010,
+    TO_DATE('08-MAY-2023 12:15', 'dd-Mon-yyyy hh24:mi'),
+    02,
+    'T',
+    0003,
+    'GEN003',
+    002,
+    1000003
+);
+
+Insert into appointment values (
+    1000011,
+    TO_DATE('15-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
+    05,
+    'S',
+    0009,
+    'GEN001',
+    005,
+    NULL
+);
+
+Insert into appointment values (
+    1000012,
+    TO_DATE('08-MAY-2023 13:15', 'dd-Mon-yyyy hh24:mi'),
+    03,
+    'L',
+    0010,
+    'ORS001',
+    002,
+    NULL
+);
+
+Insert into appointment values (
+    1000013,
+    TO_DATE('15-MAY-2023 14:15', 'dd-Mon-yyyy hh24:mi'),
+    04,
+    'L',
+    0002,
+    'GEN002',
+    004,
+    1000002
+);
+
+Insert into appointment values (
+    1000014,
+    TO_DATE('15-MAY-2023 14:15', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'S',
+    0004,
+    'GEN001',
+    001,
+    1000004
+);
+
+Insert into appointment values (
+    1000015,
+    TO_DATE('15-MAY-2023 14:45', 'dd-Mon-yyyy hh24:mi'),
+    01,
+    'L',
+    0006,
+    'END001',
+    001,
+    1000006
+);
+
+Insert into appointment values (
+    1000016,
+    TO_DATE('08-MAY-2023 16:30', 'dd-Mon-yyyy hh24:mi'),
+    05,
+    'T',
+    0008,
+    'GEN001',
+    005,
+    1000009
+);
+
+
+
+
 
 
