@@ -17,11 +17,11 @@
 -- Ensure all column comments, and constraints (other than FK's)
 -- are included. FK constraints are to be added at the end of this script
 
-DROP TABLE appointment CASCADE CONSTRAINTS;
-
-DROP TABLE emergency_contact CASCADE CONSTRAINTS;
-
-DROP TABLE patient CASCADE CONSTRAINTS;
+--DROP TABLE appointment CASCADE CONSTRAINTS PURGE;
+--
+--DROP TABLE emergency_contact CASCADE CONSTRAINTS PURGE;
+--
+--DROP TABLE patient CASCADE CONSTRAINTS PURGE;
 
 /* TABLE: APPOINTMENT*/
 
