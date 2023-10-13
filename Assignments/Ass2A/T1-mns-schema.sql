@@ -75,7 +75,6 @@ ALTER TABLE appointment
     ADD CONSTRAINT chk_appointmentlength CHECK ( appt_length IN ( 'S', 'T', 'L' ) );
 
 
-
 /* TABLE: EMERGENCY_CONTACT*/
 
 CREATE TABLE emergency_contact (
@@ -181,6 +180,10 @@ ALTER TABLE appointment
 ALTER TABLE appointment
     ADD CONSTRAINT nurse_appointment_fk FOREIGN KEY ( nurse_no )
         REFERENCES nurse ( nurse_no );
+
+ALTER TABLE appointment
+    ADD CONSTRAINT appt_prior_apptno_fk FOREIGN KEY ( appt_prior_apptno )
+        REFERENCES appointment ( appt_no );
 
 ALTER TABLE patient
     ADD CONSTRAINT patient_ec_fk FOREIGN KEY ( ec_id )
