@@ -242,7 +242,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000002,
     TO_DATE('01-MAY-2023 08:30', 'dd-Mon-yyyy hh24:mi'),
-    02,
+    03,
     'L',
     1002,
     'GEN002',
@@ -253,7 +253,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000003,
     TO_DATE('01-MAY-2023 09:00', 'dd-Mon-yyyy hh24:mi'),
-    01,
+    04,
     'T',
     1003,
     'GEN003',
@@ -264,7 +264,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000004,
     TO_DATE('01-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
-    01,
+    02,
     'S',
     1004,
     'GEN001',
@@ -275,7 +275,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000005,
     TO_DATE('01-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
-    02,
+    05,
     'T',
     1005,
     'ORS001',
@@ -286,7 +286,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000006,
     TO_DATE('08-MAY-2023 08:45', 'dd-Mon-yyyy hh24:mi'),
-    03,
+    01,
     'T',
     1006,
     'END001',
@@ -319,7 +319,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000009,
     TO_DATE('08-MAY-2023 11:45', 'dd-Mon-yyyy hh24:mi'),
-    04,
+    03,
     'L',
     1008,
     'GEN002',
@@ -330,7 +330,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000010,
     TO_DATE('08-MAY-2023 12:15', 'dd-Mon-yyyy hh24:mi'),
-    02,
+    04,
     'T',
     1003,
     'GEN003',
@@ -341,7 +341,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000011,
     TO_DATE('15-MAY-2023 10:00', 'dd-Mon-yyyy hh24:mi'),
-    05,
+    02,
     'S',
     1009,
     'GEN001',
@@ -352,7 +352,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000012,
     TO_DATE('15-MAY-2023 13:15', 'dd-Mon-yyyy hh24:mi'),
-    03,
+    05,
     'L',
     1010,
     'ORS001',
@@ -363,7 +363,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000013,
     TO_DATE('15-MAY-2023 14:15', 'dd-Mon-yyyy hh24:mi'),
-    04,
+    03,
     'L',
     1002,
     'GEN002',
@@ -374,7 +374,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000014,
     TO_DATE('15-MAY-2023 14:15', 'dd-Mon-yyyy hh24:mi'),
-    01,
+    02,
     'S',
     1004,
     'GEN001',
@@ -396,7 +396,7 @@ Insert into appointment values (
 Insert into appointment values (
     1000016,
     TO_DATE('15-MAY-2023 16:30', 'dd-Mon-yyyy hh24:mi'),
-    05,
+    03,
     'T',
     1008,
     'GEN002',
