@@ -104,6 +104,11 @@ Insert into appointment values (
 
 --3(d)
 
-
+UPDATE appointment
+SET
+    appt_datetime = TO_DATE('18-Sep-2023 16:00', 'dd-Mon-yyyy hh24:mi')
+WHERE
+    appt_no = 1000003;
+    
 --3(e)
 
