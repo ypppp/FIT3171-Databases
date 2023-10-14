@@ -112,3 +112,8 @@ WHERE
     
 --3(e)
 
+DELETE appointment
+WHERE
+    appt_datetime BETWEEN TO_DATE('15-Sep-2023 00:00', 'dd-Mon-yyyy hh24:mi') AND TO_DATE
+    ('22-Sep-2023 23:59', 'dd-Mon-yyyy hh24:mi');
+
