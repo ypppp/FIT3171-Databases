@@ -89,6 +89,18 @@ Insert into appointment values (
 
 --3(c)
 
+Insert into appointment values (
+    1000003,
+    TO_DATE('14-Sep-2023 16:00', 'dd-Mon-yyyy hh24:mi'),
+    02,
+    'S',
+    1002,
+    'GEN001',
+    014,
+    1000002 
+);
+
+
 
 --3(d)
 
