@@ -25,7 +25,6 @@ patient_no
 ORDER BY
 patient_no;
 
-
 --4(b)
 
 
