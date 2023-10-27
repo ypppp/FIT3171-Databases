@@ -131,6 +131,22 @@ ORDER BY
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
 
+SELECT
+    s.service_code,
+    s.service_desc,
+    s.service_stdfee,
+    ( AVG(v.apptserv_fee) - s.service_stdfee ) AS service_fee_deferential
+FROM
+         mns.service s
+    JOIN mns.appt_serv v
+    ON s.service_code = v.service_code
+GROUP BY
+    s.service_code,
+    s.service_desc,
+    s.service_stdfee
+ORDER BY
+    s.service_code
+
 
 
 /*2(f)*/
