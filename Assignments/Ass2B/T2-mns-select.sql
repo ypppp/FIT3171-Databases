@@ -36,18 +36,22 @@ order by item_stock DESC;
 -- (;) at the end of this answer
 
 SELECT
-    mns.spec_id
+    p.provider_code,
+    p.provider_title
+    || '. '
+    || p.provider_fname
+    || ' '
+    || p.provider_lname AS provider_name
 FROM
-    mns.provider
-    JOIN mns.specialisation
-    on provider.spec_id = specialisation.spec_id
+         mns.provider p
+    JOIN mns.specialisation s
+    ON p.spec_id = s.spec_id
 WHERE
-    spec_name = 'PAEDIATRIC
-DENTISTRY'
+    s.spec_name = 'Paediatric dentistry'
 ORDER BY
-    provider_lname,
-    provider_fname,
-    provider_code;
+    p.provider_lname,
+    p.provider_fname,
+    p.provider_code;
 
 
 
