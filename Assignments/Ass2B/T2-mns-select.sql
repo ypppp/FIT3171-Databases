@@ -60,6 +60,21 @@ ORDER BY
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
 
+SELECT
+    service_code, service_desc, '$' || service_stdfee
+FROM
+    mns.service
+WHERE
+    service_stdfee > (
+        SELECT
+            AVG(service_stdfee)
+        FROM
+            mns.service
+    )
+ORDER BY
+    service_stdfee DESC,
+    service_code;
+
 
 
 /*2(d)*/
