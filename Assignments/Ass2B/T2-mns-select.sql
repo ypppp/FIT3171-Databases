@@ -180,3 +180,34 @@ p.patient_no;
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
+
+SELECT
+    p.provider_code,
+    lpad(nvl(to_char(count(p.provider_code)), '-'),13) as numberappts,
+    lpad(nvl(to_char(nullif(nvl((sum(s.apptserv_fee)),0) + nvl((sum(s.apptserv_itemcost)),0), 0)), '-'),10) as Totalfees
+FROM
+    mns.provider p
+    left outer Join mns.appointment a
+    on p.provider_code = a.provider_code
+    left outer join mns.appt_serv s
+    on a.appt_no = s.appt_no
+group by
+    p.provider_code
+order by
+p.provider_code;
+
+--SELECT
+--    p.provider_code,
+--    count(p.provider_code) as numberappts
+----   lpad('$' ||(sum(s.apptserv_fee) + nvl(sum(s.apptserv_itemcost), 0)), 10)
+----   as Totalfees
+--FROM
+--         mns.appointment a
+--    left outer JOIN mns.provider   p
+--    ON a.provider_code = p.provider_code
+--    left outer JOIN mns.appt_serv s
+--    ON a.appt_no = s.appt_no
+--Group by
+--p.provider_code
+--order by
+--p.provider_code;
