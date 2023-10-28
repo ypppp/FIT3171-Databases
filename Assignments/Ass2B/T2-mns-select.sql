@@ -135,7 +135,8 @@ SELECT
     s.service_code,
     s.service_desc,
     s.service_stdfee,
-    ( AVG(v.apptserv_fee) - s.service_stdfee ) AS service_fee_deferential
+    round((AVG(v.apptserv_fee) - s.service_stdfee),
+          2) AS service_fee_deferential
 FROM
          mns.service s
     JOIN mns.appt_serv v
@@ -145,7 +146,7 @@ GROUP BY
     s.service_desc,
     s.service_stdfee
 ORDER BY
-    s.service_code
+    s.service_code;
 
 
 
@@ -153,6 +154,25 @@ ORDER BY
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
+
+SELECT
+p.patient_no,
+    p.patient_fname
+    || ' '
+    || p.patient_lname AS patient_name,
+    ( 2023 - extract(year from p.patient_dob)) AS current_age,
+    ( COUNT(a.appt_no)) AS NUMAPPTS,
+    lpad(round((((count(a.appt_no) - 1)/
+    COUNT(a.appt_no)) * 100), 1), 10) || '%' AS followups
+    
+FROM
+         mns.appointment a
+    JOIN mns.patient   p
+    ON a.patient_no = p.patient_no
+Group by
+p.patient_no, p.patient_fname, p.patient_lname, p.patient_dob
+order by
+p.patient_no;
 
 
 
