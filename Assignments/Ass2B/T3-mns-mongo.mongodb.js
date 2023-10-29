@@ -30,7 +30,7 @@ db.appointments.drop();
 
 // Create collection and insert documents
 
-db.appointment.insertMany([
+db.appointments.insertMany([
     {"_id":1,"datetime":"08/09/23 10:00","provider_code":"ORS001","provider_name":"Dr. Jessica Jones","item_totalcost":80,"no_of_items":1,"items":{"id":20,"desc":"Phospor imaging plate","standardcost":75,"quantity":1}},
     {"_id":1,"datetime":"08/09/23 10:00","provider_code":"ORS001","provider_name":"Dr. Jessica Jones","item_totalcost":80,"no_of_items":1,"items":{"id":21,"desc":"Clinasept Film","standardcost":5,"quantity":1}},
 {"_id":1,"datetime":"08/09/23 10:00","provider_code":"ORS001","provider_name":"Dr. Jessica Jones","item_totalcost":null,"no_of_items":1,"items":{"id":20,"desc":"Phospor imaging plate","standardcost":75,"quantity":1}},
@@ -88,7 +88,7 @@ db.appointment.insertMany([
 
 // List all documents you added
 
-db.appointment.find({});
+db.appointments.find({});
 
 
 // 3(c)
@@ -96,7 +96,7 @@ db.appointment.find({});
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
-db.appointment.find({ "$or": [{ "appt_serv.no_of_items": { "$gt": 2 }} , { "item_totalcost": { "$gt": 50 } }] });
+db.appointments.find({ "$or": [{ "no_of_items": { "$gt": 2 }} , { "item_totalcost": { "$gt": 50 } }] });
 
 
 
@@ -107,14 +107,74 @@ db.appointment.find({ "$or": [{ "appt_serv.no_of_items": { "$gt": 2 }} , { "item
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
+db.appointments.updateMany(
+    { "items.id": 1, "items.desc": "Paper tips" },
+    { $set: { "items.$.desc": "Paper points" } }
+  );
+  
+ 
+
 
 // Illustrate/confirm changes made
 
+db.appointments.find({ "items.id": 1 });
 
 // 3(e)
 // PLEASE PLACE REQUIRED MONGODB COMMAND/S FOR THIS PART HERE
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
+// Update appointment number 20 to insert the new items
+db.appointments.updateOne(
+    { "_id": 20 },
+    {"$push":
+        {
+            "items":
+            {
+                "id": 3,
+                "desc": "EDTA Cleansing Gel 17%",
+                "standardcost": 8,
+                "quantity": 1
+            }
+        }
+
+    }
+    );
+
+db.appointments.updateOne(
+    { "_id": 20 },
+    {"$push":
+        {
+            "items":
+            {
+                "id": 4,
+                "desc": "Irrigation Solution 2% Chlorhexidine",
+                "standardcost": 9,
+                "quantity": 1
+            }
+        }
+    
+    }
+    );
+
+db.appointments.updateOne(
+    { "_id": 20 },
+    {"$push":
+        {
+            "items":
+            {
+                "id": 8,
+                "desc": "Irrigation Needle and Syringe",
+                "standardcost": 2,
+                "quantity": 2
+            }
+        }
+    
+    }
+    );
+
 
 // Illustrate/confirm changes made
+
+db.appointments.find({ "_id": 20 });
+
