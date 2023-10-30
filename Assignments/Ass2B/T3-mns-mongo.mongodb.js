@@ -1,10 +1,10 @@
 // *****PLEASE ENTER YOUR DETAILS BELOW*****
 // T3-mns-mongo.mongodb.js
 
-// Student ID:
-// Student Name:
-// Unit Code:
-// Applied Class No:
+// Student ID: 32205481
+// Student Name: Yee Perng Yew
+// Unit Code: FIT3171
+// Applied Class No: 02
 
 //Comments for your marker:
 
