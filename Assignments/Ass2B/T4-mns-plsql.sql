@@ -1,10 +1,10 @@
 --*****PLEASE ENTER YOUR DETAILS BELOW*****
 --T4-mns-plsql.sql
 
---Student ID:
---Student Name:
---Unit Code:
---Applied Class No:
+--Student ID: 32205481
+--Student Name: Yee Perng Yew
+--Unit Code: FIT3171
+--Applied Class No: 02
 
 /* Comments for your marker:
 
@@ -19,6 +19,8 @@ CREATE OR REPLACE PROCEDURE prc_insert_appt_serv (
     p_service_code IN CHAR,
     p_output       OUT VARCHAR2
 ) AS
+
+
 BEGIN
     
 END;
