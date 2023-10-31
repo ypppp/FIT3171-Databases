@@ -161,9 +161,9 @@ p.patient_no,
     || ' '
     || p.patient_lname AS patient_name,
     ( 2023 - extract(year from p.patient_dob)) AS current_age,
-    ( COUNT(a.appt_no)) AS NUMAPPTS,
-    lpad(round((((count(a.appt_no) - 1)/
-    COUNT(a.appt_no)) * 100), 1), 10) || '%' AS followups
+    ( COUNT(a.patient_no)) AS NUMAPPTS,
+    lpad(round((((count(a.patient_no) - 1)/
+    COUNT(a.patient_no)) * 100), 1), 10) || '%' AS followups
     
 FROM
          mns.appointment a
