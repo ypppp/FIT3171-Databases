@@ -86,7 +86,55 @@ END prc_insert_appt_serv;
 
 -- Write Test Harness for 4(a)
 
+insert into appt_serv
+      values (1,'EX03',null,null);
+  
+--before value
+select *
+from appt_serv
+where appt_no= 1;
+      
+DECLARE
+    output VARCHAR2(200);
+BEGIN
+    prc_insert_appt_serv(3,'EX03',null,null);
+    dbms_output.put_line(output);
+END;
 
+--execute the procedure 
+DECLARE
+    output VARCHAR2(200);
+BEGIN
+    --call the procedure - invalid service_code
+    prc_insert_appt_serv(1,'LO05',null,null);
+    dbms_output.put_line(output);
+END;
+/
+
+--execute the procedure 
+DECLARE
+    output VARCHAR2(200);
+BEGIN
+    --call the procedure - success
+    prc_new_enrolment(1,'EX03',null,null);
+    dbms_output.put_line(output);
+END;
+/
+
+--execute the procedure 
+DECLARE
+    output VARCHAR2(200);
+BEGIN
+    --call the procedure - fail, duplicate
+    prc_new_enrolment(1,'EX03',null,null);
+    dbms_output.put_line(output);
+END;
+/
+
+--after value 
+select * from appt_serv;
+
+rollback;
 
 
 --4(b) 
