@@ -92,21 +92,14 @@ insert into appt_serv
 --before value
 select *
 from appt_serv
-where appt_no= 1;
-      
-DECLARE
-    output VARCHAR2(200);
-BEGIN
-    prc_insert_appt_serv(3,'EX03',null,null);
-    dbms_output.put_line(output);
-END;
+where appt_no = 1;
 
 --execute the procedure 
 DECLARE
     output VARCHAR2(200);
 BEGIN
     --call the procedure - invalid service_code
-    prc_insert_appt_serv(1,'LO05',null,null);
+    prc_insert_appt_serv(1,'LO05', output);
     dbms_output.put_line(output);
 END;
 /
@@ -116,7 +109,7 @@ DECLARE
     output VARCHAR2(200);
 BEGIN
     --call the procedure - success
-    prc_new_enrolment(1,'EX03',null,null);
+    prc_insert_appt_serv(1,'EX03',output);
     dbms_output.put_line(output);
 END;
 /
@@ -126,7 +119,7 @@ DECLARE
     output VARCHAR2(200);
 BEGIN
     --call the procedure - fail, duplicate
-    prc_new_enrolment(1,'EX03',null,null);
+    prc_insert_appt_serv(1,'EX03', output);
     dbms_output.put_line(output);
 END;
 /
@@ -141,4 +134,14 @@ rollback;
 --Write your trigger statement, 
 --finish it with a slash(/) followed by a blank line
 
+CREATE OR REPLACE TRIGGER mainttain_item_stock
+AFTER INSERT or DELETE or UPDATE ON APPTSERVICE_ITEM 
+FOR EACH ROW
+BEGIN
+    IF inserting then
+    
+    UPDATE apptservice_item
+    SET item_stock = item_stock - :NEW.as_item_quantity
+    WHERE item_id = :NEW.item_id;
+    
 -- Write Test Harness for 4(b)
