@@ -138,10 +138,37 @@ CREATE OR REPLACE TRIGGER mainttain_item_stock
 AFTER INSERT or DELETE or UPDATE ON APPTSERVICE_ITEM 
 FOR EACH ROW
 BEGIN
-    IF inserting then
+    if inserting then 
+    update item i 
+    set i.item_stock = : i.item_stock - as.item.quantity
+     where upper(item_id) = upper(:old.item_id);
+
+    dbms_output.put_line ('item stock has been updated');
     
-    UPDATE apptservice_item
-    SET item_stock = item_stock - :NEW.as_item_quantity
-    WHERE item_id = :NEW.item_id;
+    end if;
+    
+    
+    if deleting then
+    update item i
+    set i.item_stock = i.item_stock + as.item.quantity
+    where item_id = i.item_id;
+    
+    dbms_output.put_line ('item stock has been updated');
+    
+    end if;
+    
+    if updating then
+    update item i
+    set i.item_stock = i.item_stock - as.item.quantity
+    where item_id = i.item_id;
+    
+    dbms_output.put_line ('item stock has been updated');
+    
+    end if;
+  
+  
+end;
+/
+
     
 -- Write Test Harness for 4(b)
