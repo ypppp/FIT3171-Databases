@@ -192,22 +192,9 @@ FROM
     left outer join mns.appt_serv s
     on a.appt_no = s.appt_no
 group by
-    p.provider_code
+    p.provider_code, a.appt_datetime
+having
+    a.appt_datetime between TO_date('10-09-2023 09:00', 'DD-MM-YYYY HH24:MI')
+    AND TO_date('14-09-2023 17:00', 'DD-MM-YY HH24:MI')
 order by
 p.provider_code;
-
---SELECT
---    p.provider_code,
---    count(p.provider_code) as numberappts
-----   lpad('$' ||(sum(s.apptserv_fee) + nvl(sum(s.apptserv_itemcost), 0)), 10)
-----   as Totalfees
---FROM
---         mns.appointment a
---    left outer JOIN mns.provider   p
---    ON a.provider_code = p.provider_code
---    left outer JOIN mns.appt_serv s
---    ON a.appt_no = s.appt_no
---Group by
---p.provider_code
---order by
---p.provider_code;
